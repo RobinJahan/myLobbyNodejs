@@ -4,7 +4,7 @@ const http = require('http');
 const server = http.createServer(app);
 const io = require('socket.io')(server, {
     cors: {
-        origins: ['http://localhost:8080']
+        origins: ['http://localhost:8080', 'https://mylobby-vuejs-c10a6.web.app/']
     }
 });
 
@@ -305,9 +305,8 @@ io.on('connection', (socket) => {
     })
 });
 
-server.listen(3001, () => {
-    console.log('listening http on *:3001');
-    console.log(rooms)
+server.listen(process.env.PORT, () => {
+    console.log(`listening http on port :${process.env.PORT}`);
 });
 
 function createRoomId(){
