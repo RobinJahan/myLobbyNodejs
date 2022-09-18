@@ -1,0 +1,16 @@
+{
+  "name": "back-socket-vue",
+  "version": "1.0.0",
+  "description": "lobby and rooms with socketio and vuejs",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "author": "rjahan",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "nodemon": "^2.0.18",
+    "socket.io": "^4.5.1"
+  }
+}
